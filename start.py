@@ -7,9 +7,9 @@ from form_ui import Ui_Form
 
 from funcy import partial
 
-class Form(Ui_Form, QtGui.QWidget):
+class Form(QtGui.QWidget, Ui_Form):
     def __init__(self):
-        QtGui.QWidget.__init__(self)
+        super(Form,self).__init__()
         self.setupUi(self)
 
     def setupUi(self, form):
